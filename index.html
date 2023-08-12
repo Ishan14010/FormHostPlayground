@@ -1,0 +1,65 @@
+<?php
+include 'php/db.php';
+
+// Retrieve content from the website_content table
+$sql = "SELECT title, content FROM website_content WHERE id = 1"; // Adjust the ID as needed
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $title = $row['title'];
+    $content = $row['content'];
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Your Web App</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Explore Our Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor elit a urna aliquam, a convallis nulla vehicula. Integer euismod mi ac purus bibendum, eget ultricies leo tincidunt.</p>
+
+        <h3>Featured Articles</h3>
+        <div class="featured-article">
+            <h4>Article Title 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate odio in libero bibendum, nec fringilla quam auctor.</p>
+        </div>
+
+        <div class="featured-article">
+            <h4>Article Title 2</h4>
+            <p>Suspendisse in mauris id justo luctus eleifend. Sed et turpis nec elit condimentum euismod.</p>
+        </div>
+
+        <h3>Recent Posts</h3>
+        <div class="recent-post">
+            <h4>Post Title 1</h4>
+            <p>Curabitur eleifend sem eu risus elementum, eget scelerisque elit convallis. Duis mattis elit vel sem lacinia, non placerat turpis dictum.</p>
+        </div>
+
+        <div class="recent-post">
+            <h4>Post Title 2</h4>
+            <p>Integer congue risus nec luctus interdum. Etiam suscipit nulla a lacus convallis, non vehicula lectus iaculis.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Web App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

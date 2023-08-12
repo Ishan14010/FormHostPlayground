@@ -1,0 +1,61 @@
+<?php
+include 'php/db.php';
+
+// Retrieve content from the website_content table
+$sql = "SELECT title, content FROM website_content WHERE id = 2"; // Adjust the ID as needed
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $title = $row['title'];
+    $content = $row['content'];
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - Your Web App</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Our Story</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna id nisi interdum, in feugiat elit gravida.</p>
+
+        <h3>Our Team</h3>
+        <div class="team-member">
+            <img src="images/team-member1.jpg" alt="Team Member 1">
+            <h4>Ishan</h4>
+            <p>Founder & CEO</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/team-member2.jpg" alt="Team Member 2">
+            <h4>Riya</h4>
+            <p>Co-Founder & CTO</p>
+        </div>
+
+        <h3>Our Values</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor elit a urna aliquam, a convallis nulla vehicula. Integer euismod mi ac purus bibendum, eget ultricies leo tincidunt.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Web App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
