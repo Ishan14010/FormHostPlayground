@@ -32,23 +32,26 @@ if (mysqli_num_rows($result) > 0) {
 
     <div class="container">
         <h2>Our Story</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum urna id nisi interdum, in feugiat elit gravida.</p>
+        <?php
+        // Display the retrieved content
+        echo "<p>$content</p>";
+        ?>
 
         <h3>Our Team</h3>
         <div class="team-member">
-            <img src="images/team-member1.jpg" alt="Team Member 1">
+            <img src="images/profile-photo.jpg" alt="Team Member 1">
             <h4>Ishan</h4>
             <p>Founder & CEO</p>
         </div>
 
         <div class="team-member">
-            <img src="images/team-member2.jpg" alt="Team Member 2">
+            <img src="images/girl.webp" alt="Team Member 2">
             <h4>Riya</h4>
             <p>Co-Founder & CTO</p>
         </div>
 
         <h3>Our Values</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor elit a urna aliquam, a convallis nulla vehicula. Integer euismod mi ac purus bibendum, eget ultricies leo tincidunt.</p>
+        <p>We believe in fostering innovation, teamwork, and integrity. Our commitment to excellence drives us to create meaningful and impactful solutions that benefit our community and beyond.</p>
     </div>
 
     <footer>
@@ -56,6 +59,3 @@ if (mysqli_num_rows($result) > 0) {
     </footer>
 </body>
 </html>
-
-
-

@@ -32,28 +32,32 @@ if (mysqli_num_rows($result) > 0) {
 
     <div class="container">
         <h2>Explore Our Content</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor elit a urna aliquam, a convallis nulla vehicula. Integer euismod mi ac purus bibendum, eget ultricies leo tincidunt.</p>
+        <?php
+        // Display the retrieved title and content
+        echo "<h3>$title</h3>";
+        echo "<p>$content</p>";
+        ?>
 
         <h3>Featured Articles</h3>
         <div class="featured-article">
             <h4>Article Title 1</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate odio in libero bibendum, nec fringilla quam auctor.</p>
+            <p>This is a featured article about a topic that interests you. It contains important information that you'll find valuable.</p>
         </div>
 
         <div class="featured-article">
             <h4>Article Title 2</h4>
-            <p>Suspendisse in mauris id justo luctus eleifend. Sed et turpis nec elit condimentum euismod.</p>
+            <p>Explore the latest trends in technology and learn how they are shaping the future of our digital world.</p>
         </div>
 
         <h3>Recent Posts</h3>
         <div class="recent-post">
             <h4>Post Title 1</h4>
-            <p>Curabitur eleifend sem eu risus elementum, eget scelerisque elit convallis. Duis mattis elit vel sem lacinia, non placerat turpis dictum.</p>
+            <p>Join the discussion on social issues and gain insights into different perspectives from around the globe.</p>
         </div>
 
         <div class="recent-post">
             <h4>Post Title 2</h4>
-            <p>Integer congue risus nec luctus interdum. Etiam suscipit nulla a lacus convallis, non vehicula lectus iaculis.</p>
+            <p>Discover the beauty of nature through breathtaking photographs and inspiring stories of travel and adventure.</p>
         </div>
     </div>
 
@@ -62,4 +66,3 @@ if (mysqli_num_rows($result) > 0) {
     </footer>
 </body>
 </html>
-

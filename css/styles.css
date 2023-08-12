@@ -73,3 +73,12 @@ nav a {
 .form input[type="submit"]:hover {
     background-color: #555;
 }
+/* Adjust image sizes and make them responsive */
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+
+}
