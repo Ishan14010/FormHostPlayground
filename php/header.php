@@ -7,7 +7,19 @@
 <body>
     <header>
         <!-- Your logo or site title -->
-        <h1>Web App</h1>
+        <h1>
+            <img src="images\attachment_115956224.jpeg" alt="WebConnect Hub Logo" width="100" height="100">
+            WebConnect Hub
+        </h1>
+
+        <!-- Login form -->
+        <div class="login-form">
+            <form action="login.php" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
 
         <!-- Site navigation -->
         <nav>
