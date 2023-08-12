@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-// Check if user is logged in (You need to implement proper authentication)
+// Check if user is logged in 
 
 // Fetch all registered users
 $usersQuery = "SELECT id, username, email FROM admin_data";

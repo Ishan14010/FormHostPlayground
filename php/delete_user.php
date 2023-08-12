@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-// Check if user is logged in (You need to implement proper authentication)
+// Check if user is logged in 
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $userId = $_GET["id"];
